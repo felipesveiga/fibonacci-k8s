@@ -20,6 +20,7 @@ for dir in $(ls $ROOT);
 done
 
 # Now, setting the Deployments' images. 
-for image in "{$images[@]}";
+for image in "${images[@]}";
 do 
     kubectl set image deployments/"$image"-deployment "$image"="$DOCKER_USERNAME"/multi-"$image":"$SHA" # Replace $DOCKER_USERNAME for stephengrider in case of any issue.
+done
