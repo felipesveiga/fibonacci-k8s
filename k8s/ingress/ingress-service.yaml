@@ -15,7 +15,7 @@ spec:
         - www.k8s-multi-veiga.com
       secretName: k8s-multi-veiga-com
   rules:
-    - host: k8s-multi-veiga-com
+    - host: k8s-multi-veiga.com
       http:
           paths:
             - path: /?(.*) 
@@ -32,7 +32,7 @@ spec:
                   name: server-cluster-ip-service
                   port: 
                     number: 5000
-    - host: www.k8s-multi-veiga-com
+    - host: www.k8s-multi-veiga.com
       http:
           paths:
             - path: /?(.*) 
